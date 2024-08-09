@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valerianka.piercing</title>
+
+    <link rel="stylesheet" href=" https://kit.fontawesome.com/367278d2a4.css " crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="header">
+        <img src="img/logo.PNG" alt="logo">
+        <div>
+            <span><i class="fa-sharp fa-thin fa-phone"></i> +7(910)496-95-46</span>
+            <p>Студия Piercing Line, Беговая ул. 17к1</p>   
+        </div>      
+    </div>    
+
+    <div id="div-1">
+        <div class="main">
+            <h1>Со мной не больно</h1>
+            <p>Бескомпромиссное качество исполнения. Оказаться в моих легких руках - настоящая мечта. Стопроцентный комфорт во время процедуры!</p>
+        </div>
+    </div>
+
+    <div id="div-2">
+        <div class="img-div">
+            <img src="img/photo_5303063792332169067_y.jpg" alt="">
+            <img src="img/lera-about.jpg" alt="">
+            <img src="img/photo_5303179687729685722_y.jpg" alt="">
+            <img src="img/photo_5303063792332169072_y.jpg" alt="">
+        </div>
+        <div class="main">
+            <h1>Обо мне</h1>
+            <p>
+                Ну что ж, давайте познакомимся! <br><br>
+    
+                Меня зовут Лера и я являюсь профессиональным пирсером с 2021 года. <br><br>
+
+                Однако мой путь начался еще в 2019. Как и у многих, в начале были проколы «на коленке» подружкам, затем работа на дому… пока не пришло осознание, что пирсинг - это сложно и моих скудных знаний недостаточно. Тогда началось длительное обучение, которое расширило мое представление о пирсинге, добавило уверенности и закрыло пробелы в знаниях. <br><br>
+
+                И вот я готова провести тебя от подготовки к проколу до полного заживления 
+                С удовольствием поделюсь своей любовью к пирсингу и помогу справиться с беспокойством.<br><br> 
+
+                В своей работе я гарантирую стерильность и комфортную атмосферу. 
+            </p>
+        </div>
+    </div>
+
+    <div id="div-3">
+        <h1>Проколы</h1>
+        <div>
+            <a href="/lera/img/girl.PNG" target="_self"><img src="img/photo_ear.jpg" alt="works*1"></a>
+            <h2>Ухо</h2>
+            <!-- <p>УХО</p> -->
+        </div>
+        <div>
+            <img src="img/photo_nose.jpg" alt="works*2">
+            <h2>Нос</h2>
+            <!-- <p>НОС</p> -->
+        </div>
+        <div>
+            <img src="img/photo_microdermal.jpg" alt="works*3">
+            <h2>Микродермал</h2>
+            <!-- <p>МИКРОДЕРМАЛ</p> -->
+        </div>
+        <div>
+            <img src="img/photo_body.jpg" alt="works*4">
+            <h2>Тело</h2>
+            <!-- <p>ТЕЛО</p> -->
+        </div>
+        <!-- <div>
+            <img src="img/photo_5456405102735776029_y.jpg" alt="works*5">
+            <h2></h2>
+            <p></p>
+        </div> -->
+        <div>
+            <img src="img/photo_tongue.jpg" alt="works*6">
+            <h2>Язык</h2>
+            <!-- <p>ЯЗЫК</p> -->
+        </div>
+    </div>
+
+    <div id="div-4">
+        <div id="icons">
+            <a href="https://t.me/valerianka_piercing"><i class="fa-brands fa-telegram" style="color: #fff;"></i></a>
+            <a href="#"><i class="fa-brands fa-vk" style="color: #fff;"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram" style="color: #fff;"></i></a>
+        </div>
+    </div>
+
+    <!-- <div id="test-photo" style="display: none;">
+        <img src="img/girl.PNG" alt="">
+    </div> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!--<script>
+        $(document).ready(function(){
+            $(document).on('click', '#div-3 img', function () {
+                $('body > *').hide()
+                $('#test-photo').show()
+                console.log($('body > *:not(#test-photo)'))
+
+                // console.log('img')
+            })
+        })
+    </script> -->
+
+    <script>
+        var block_show = null;
+ 
+        function showTop(elem) {
+            var wt = $(window).scrollTop();
+            var wh = $(window).height();
+            var et = $(elem).offset().top;
+            var eh = $(elem).outerHeight();
+         
+            if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
+                if (block_show == null || block_show == false) {   
+                    $(elem).css('animation-name', 'showTop');
+                    $(elem).css('animation-play-state', 'running');
+                    $(elem).css('top', '0');
+                }
+                block_show = true;
+            } else {
+                if (block_show == null || block_show == true) {
+                    $(elem).css('animation-name', 'none');
+                    $(elem).css('top', '30vh');
+                }
+                block_show = false;
+            }
+        }
+            
+        if (Number($(window).width()) >= 920) {
+            $(window).scroll(function(){
+                showTop('#div-3')
+                
+                var wt = $(window).scrollTop();
+                var wh = $(window).height();
+                var et = $('#div-2').offset().top;
+                var eh = $('#div-2').outerHeight();
+
+
+                if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
+                    $('#div-2 > .main > *').css('animation-play-state', 'running');
+                } 
+
+                // if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
+                //     if (block2_show == null || block2_show == false) {
+                //         console.log('show')
+                //     }
+                //     block2_show = true;
+                // } else {
+                //     if (block2_show == null || block2_show == true) {
+                //         console.log('hide')
+                //     }
+                //     block_show = false;
+                // }
+
+                // if (wt == et) {
+                //     // $('#div-3').css('animation-name', 'showLeft');
+                //     // $('#div-3').css('animation-play-state', 'running');
+
+                //     // block_show = true;
+                //     console.log(true)
+                // } else{
+                //     console.log(false)
+                //     // if (block_show == null || block_show == true) {
+                //     //     $('#div-3').css('top', '30vh');
+                //     //     $('#div-3').css('animation-name', 'none');
+                //     // }
+                //     // block_show = false;
+                // }
+            });
+        }
+    </script>
+
+</body>
+</html>
