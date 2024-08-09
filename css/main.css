@@ -55,7 +55,7 @@ body{
 #div-1{
     height: 80vh;
 
-    background: url('/lera/img/lera-header.JPEG') no-repeat;
+    background: url('../img/lera-header.JPEG') no-repeat;
     background-position: center;
     background-size: 100%;
     color: rgb(255, 250, 241);
